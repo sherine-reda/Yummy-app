@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div
+      class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+      style="display: none"
+    >
+      <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+    </div>
+    <section id="home">
+      <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0">
+        <div
+          class="content d-flex flex-column justify-content-between bg-white p-2 py-4 text-center"
+        >
+          <img src="images/logo.png" alt="" />
+          <div
+            class="openNav"
+            style="font-size: 30px; cursor: pointer; font-weight: bold"
+            onclick="openNav()"
+          >
+            &#9776;
+          </div>
+          <div>
+            <i
+              class="fa-solid fa-globe d-block mb-1"
+              style="cursor: pointer"
+            ></i>
+            <i class="fa-solid fa-share-nodes" style="cursor: pointer"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mySidenav"
+        class="sidenav d-flex flex-column justify-content-between"
+      >
+        <!-- <a class="closebtn" onclick="closeNav()">&times;</a> -->
+        <ul class="overflow-hidden">
+          <li
+            onclick="searchInputs(),closeNav()"
+            class="py-2 position-relative"
+          >
+            Search
+          </li>
+          <li
+            onclick="getCategories(),closeNav()"
+            class="py-2 position-relative"
+          >
+            Categories
+          </li>
+          <li onclick="getArea(),closeNav()" class="py-2 position-relative">
+            Area
+          </li>
+          <li
+            onclick="getIngredients(),closeNav()"
+            class="py-2 position-relative"
+          >
+            Ingredients
+          </li>
+          <li
+            onclick="getFormContact(),closeNav()"
+            class="py-2 position-relative"
+          >
+            Contact Us
+          </li>
+        </ul>
+        <div class="nav-footer p-4 position-relative text-white">
+          <div class="icons">
+            <i class="fa-brands fa-facebook" style="cursor: pointer"></i>
+            <i class="fa-brands fa-twitter" style="cursor: pointer"></i>
+            <i class="fa-solid fa-globe" style="cursor: pointer"></i>
+          </div>
+          <div class="footer">
+            <p>Copyright Â© 2023 All Rights<br />Reserved.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container conten text-white mt-5 mb-5 position-relative">
+        <div class="row justify-content-center" id="Search"></div>
+        <div
+          class="container conten min-vh-100 d-flex justify-content-center align-items-center text-white"
+        >
+          <div class="row gy-4 justify-content-center" id="homeMeals"></div>
+        </div>
+        <div
+          class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+          style="display: none"
+        >
+          <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+      </div>
+
+      <!-- <div class="overlay"></div> -->
+    </section>
+
+    <!-- section details -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
